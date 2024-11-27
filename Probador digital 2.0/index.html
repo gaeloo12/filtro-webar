@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtro WebAR - Playera</title>
+  <!-- Incluye A-Frame y AR.js -->
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/aframe/build/aframe-ar.min.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+  <!-- Escena de realidad aumentada -->
+  <a-scene embedded arjs>
+    <!-- Marcador Hiro (predeterminado en AR.js) -->
+    <a-marker preset="hiro">
+      <!-- Imagen de la playera -->
+      <a-image 
+        src="playera.png" 
+        position="0 0 0" 
+        scale="1.5 1.5 1">
+      </a-image>
+    </a-marker>
+    <!-- Cámara AR -->
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
